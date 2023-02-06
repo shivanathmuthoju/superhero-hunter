@@ -55,7 +55,7 @@ searchBar.addEventListener('keydown', (e) => {
         
         let ts = date.getTime();
         let hash = getHash(ts);
-        let url = `http://gateway.marvel.com/v1/public/characters?name=${search}&ts=${ts}&apikey=${apiKey}&hash=${hash}`;
+        let url = `https://gateway.marvel.com/v1/public/characters?name=${search}&ts=${ts}&apikey=${apiKey}&hash=${hash}`;
         resultsForSearch = [];
         fetchAPIForSearch(url)
               
@@ -99,7 +99,7 @@ function fetchAPIForSearch(url) {
                 {
                     let ts = date.getTime();
                     let hash = getHash(ts);
-                    let similaritems = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${search}&limit=10&ts=${ts}&apikey=${apiKey}&hash=${hash}`;
+                    let similaritems = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${search}&limit=10&ts=${ts}&apikey=${apiKey}&hash=${hash}`;
                     searchedForSimilarItems = true;
                     fetchAPIForSearch(similaritems);
                 
