@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+
+/* -----------CSS Reset-------------- */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+/*--------- Declaring variables for page------- */
+
+:root {
+
+    --background-color-main : #F6F4F2;
+    --background-color-secondary : #2E2C2C;
+    --accent-color : #F64E4D;
+
+}
+
+/* Declaring Font faces */
+@font-face {
+    font-family: Qellia;
+    src: url(./Assets/Fonts/Qellia/Qellia-Personal\ Use\ Only.otf);
+
+}
+
+@font-face {
+    font-family: Heirloom;
+    src: url(./Assets/Fonts/Heirloom/Heirloom.ttf);
+}
+
+/* ----- Content --------- */
+body {
+  background-color: var(--background-color-main);
+}
+
+.container {
+  height: 100vh;
+  width : 100vw; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top, .bottom {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__left, .top__right, .bottom__left, .bottom__right {
+  height: 100%;
+  min-width: 20vh;
+  max-width: 20vh;
+  
+}
+
+.top__left, .top__right {
+  padding-top: 50px;
+}
+
+.bottom__right, .bottom__left {
+  padding-bottom: 50px;
+}
+
+.left {
+  padding-left: 50px;
+}
+
+.right {
+  padding-right: 50px;
+}
+
+.pin {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #F64E4D;
+  box-shadow: 6px 9px 4px 0px #000;
+}
+
+.menu {
+  height: 20vh;
+  width: 60vw;
+  padding: 50px 20px 2vh 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btns {
+  font-weight: normal;
+  font-family: "Qellia";
+  font-size: calc(3vw + 3vh);
+  cursor: pointer;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--background-color-secondary);
+  margin: 0px 5px;
+}
+
+/* Middle Section */
+
+.middle {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle__left, .middle__right {
+
+  min-width: 20vh;
+  max-width: 20vh;
+  height: 100%;
+  padding: 2vh 0;
+}
+
+.middle__left{
+  padding-left: 50px;
+ 
+}
+
+.middle__right{
+  padding-right: 50px;
+
+}
+
+.grill {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+
+.grill__lines {
+  height: 1.5vh;
+  width: 14vh;
+  background-color: var(--background-color-secondary);
+}
+
+.display {
+  min-height: 60vh;
+  width: 60vw;
+  background-color: var(--background-color-secondary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.display__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.display__heading {
+  color: var(--background-color-main);
+  text-transform: uppercase;
+  font-family: "Qellia";
+  font-weight: normal;
+  font-size: calc(5.5vw + 5.5vh);
+  letter-spacing: .5em;
+  margin-right: -.5em;
+  text-align: center;
+  
+}
+
+.display__subtitle {
+  color: var(--accent-color);
+  text-transform: capitalize;
+  font-family: "Heirloom";
+  font-size: calc(3vh + 3vw);
+  margin-top: calc(-1 * calc(3vw + 3vh));
+  text-align: right;
+}
+
+/* ---- Bottom section ---- */
+
+.search {
+  height: 20vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__bar {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--background-color-secondary);
+  height: 7vh;
+  padding: 2vw;
+  font-size: 3em;
+  font-family: "Heirloom";
+  color: var(--background-color-main);
+}
+
+.search__bar::placeholder {
+  color: var(--background-color-main);
+}
+
+.search__bar::-moz-placeholder {
+  color: var(--background-color-main);
+}
+
+.grill__lines , .display , .search__bar, .catalogue_character, .display__loading, .hero__image {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  
+}
+
+/* --- displays ---*/
+
+.display__loading {
+  background-image: url('./Assets/images/glitch-effect-black-background-compressed.jpg');
+  animation: static 1s linear infinite;
+  display: none;
+  z-index: 10;
+}
+  
+.display__home {
+ 
+  display: grid;
+  place-items: center;
+  transition: margin 1s ease-in-out;
+  overflow: hidden;
+  
+}
+
+
+.display__catalogue, .display__searchResults, .display__favourites {
+  color: var(--background-color-main);
+  display: grid;
+  place-items: center;
+  transition: all 1s ease-in-out;
+  display: none;
+  overflow-y: scroll;
+}
+
+.display__catalogue::-webkit-scrollbar, .display__searchResults::-webkit-scrollbar, .display__favourites::-webkit-scrollbar {
+  
+  display: none;
+
+}
+
+.display__home, .display__loading, .display__catalogue, .display__searchResults , .display__favourites , .display__hero{
+  min-height: 60vh;
+  width: 100%;
+  max-height: 60vh;
+}
+
+#hero_section {
+  display: flex;
+  place-items: center;
+ 
+}
+
+.hero__container {
+  height: 100%;
+  min-width: 60vw;
+  display: flex;
+  flex-direction: row;
+  
+}
+.hero__container > div {
+  height : 60vh;
+  min-width: 60vw;
+  max-width: 60vw;;
+  display: flex;
+}
+.hero__image {
+  height: 100%;
+  min-width: 40%;
+  max-width: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__data {
+  height: 100%;
+  min-width: 60%;
+  max-width: 60%;
+  padding: 35px;
+  color: var(--background-color-main);
+  overflow-y: scroll;
+ 
+}
+
+.hero__data::-webkit-scrollbar {
+  display: none;
+}
+
+.heroDisplayNameContainer {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+
+  
+}
+
+.heroDisplayName {
+  width: 100%;
+  overflow: hidden;
+  font-family: "Qellia";
+  font-size: 4em;
+  font-weight: normal;
+  white-space: nowrap;
+ 
+   
+}
+
+.heroDisplayName:not(:hover) {
+  text-overflow: ellipsis;
+}
+
+.heroDisplayName:focus, .heroDisplayName:hover {
+  
+    
+    overflow: visible;
+    animation: scroll-text 5s ease-in-out infinite;
+    
+  
+}
+
+
+.heroDisplayData {
+  font-family: 'Antic Didone', serif;
+  text-transform: uppercase; 
+}
+
+.heroDisplayData.description {
+  text-transform: none;
+  margin-bottom: 10px;
+  width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+/* loading animation */
+@keyframes static {
+
+  0% {
+    background-position: 0 0;
+  }
+  
+  100% {
+    background-position: 100% 100%;
+  }
+
+}
+/* scrolls overflow text on hover */
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.catalogue_container, .searchResults__container, .favourites__container {
+  width: 100%;
+  height: 100%;
+  padding: 2vh 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+
+
+._character {
+  width: 10vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--background-color-main);
+  margin: 5px;
+  padding: 0;
+}
+
+
+.character_image {
+  height: 80%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.name_container {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 20%;
+  display: grid;
+  place-items: center;
+}
+
+.character_name {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--background-color-secondary);
+  font-family: "qellia";
+  font-weight: bold;
+  font-size: 1em;
+  overflow: hidden;
+
+}
+
+#catalogue_more {
+  background-color: var(--background-color-main);
+  padding: 5px 20px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-family: "Heirloom";
+  font-weight: bold;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.character_name:not(:hover) {
+  text-overflow: ellipsis;
+}
+
+.character_name:hover, .character_name:focus {
+  overflow: visible;
+  animation: scroll-text 5s ease-in-out infinite;
+}
+
+.noResults {
+  font-family: "Heirloom";
+  color: var(--background-color-main));
+  font-size: calc(5vw + 5vh);
+}
+
+.bx {
+  pointer-events: none;
+}
+
+.hero__image > button {
+  background-color: var(--accent-color);
+  color: var(--background-color-main);
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.character_image > button {
+  background-color: var(--accent-color);
+  color: var(--background-color-main);
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.minWidthDiv {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color-main);
+  z-index: 20480;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: "Qellia";
+  font-size: 1.5em;
+  overflow: hidden;
+  white-space: pre-wrap;
+  display: none;
+}
+
+
+@media (max-width : 900px) {
+
+  .container {
+    display: none;
+  }
+
+  .minWidthDiv {
+    display: grid;
+  }
+
+}
+
+
+

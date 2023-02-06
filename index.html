@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHero Hunter</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="top">
+            <div class="top__left left ">
+                <div class="pin"></div>
+            </div>
+            <div class="menu">
+                <h1 class="menu-btns" id="catalogue">Catalogue</h1>
+                <span class="line"></span>
+                <h1 class="menu-btns" id="favourites">Favourites</h1>
+            </div>
+            <div class="top__right right ">
+                <div class="pin"></div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="middle__left">
+                <div class="grill">
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                </div>
+            </div>
+            <div class="display">
+                <!-- different displays to load  -->
+                <div class="display__loading"></div>
+                <div class="display__home">
+                    <div class="display__text">
+                        <h1 class="display__heading">marvel</h1>
+                        <p class="display__subtitle">Hunt your heroes</p>
+                    </div>
+                </div>
+                <div class="display__catalogue">
+                    <div class="catalogue_container">
+                        <!-- <div class="_character">
+                            <div class="character_image" style="background-image: url('');">
+
+                            </div>
+                            <div>
+                                <p class="character_name"></p>
+                            </div>
+                        </div> -->
+                    </div> 
+                    <button id="catalogue_more">Load More</button>
+                </div>
+                <div class="display__searchResults">
+                    <div class="searchResults__container"></div>
+                </div>
+                <div class="display__favourites">
+                    <div class="favourites__container"></div>                    
+                </div>
+                <div class="display__hero" id="hero_section">
+                    <div class="hero__container">
+                        <!-- <div class="hero__image" style="background-image: url('');"></div>
+                        <div class="hero__data">
+                            <h1></h1>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="middle__right">
+                <div class="grill">
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                    <div class="grill__lines"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom__left left bottom">
+                <div class="pin"></div>
+            </div>
+            <div class="search">
+                <input type="text" class="search__bar" id="search" placeholder="search">
+                <p>Data provided by Marvel. © 2014 Marvel</p>
+            </div>
+            <div class="bottom__right right bottom">
+                <div class="pin"></div>
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="minWidthDiv">
+        <p>You cant find superheroes in small screens;-) <br> Open the website from your desktop </p>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.min.js" ></script>
+    <script src="./keys.js" type="module"></script>
+    <script src="./variables.js" type="module"></script>
+    <script src="./heroLoader.js" type="module"></script>
+    <script src="./catalogue.js" type="module"></script>
+    <script src="./search.js" type="module"></script>
+    <script src="./favourites.js" type="module"></script>
+    
+</body>
+</html>
