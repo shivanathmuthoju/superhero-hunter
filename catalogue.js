@@ -41,7 +41,7 @@ function callAPIforCatalogue() {
     let ts = date.getTime();
     let hash = getHash(ts);
     let offset = catalog.length; // sets offset to get data 
-    let url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&offset=${offset}&apikey=${apiKey}&hash=${hash}`;
+    let url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&offset=${offset}&apikey=${apiKey}&hash=${hash}`;
     
     fetch(url)
         .then((response) => response.json())
