@@ -77,9 +77,9 @@ window.addEventListener('click', (e) => {
 // function to check if the item is in favourites or not. Takes the id of the item as parameter
 function checkForFav(id) {
 
-    for (let fav of favouritesList) {
+    for (let fav in favouritesList) {
 
-        if (fav == id) {
+        if (favouritesList[fav] == id) {
             return true;
         }
 
