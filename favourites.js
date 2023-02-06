@@ -26,7 +26,7 @@ let favouriteContainer = document.querySelector(".favourites__container");
 window.addEventListener('load',() => {
 
     let localData = JSON.parse(localStorage.getItem(storedFavourites));
-    console.log(localData, "LocalData);
+    console.log(localData, "LocalData");
     console.log(typeof(localData));
     favouritesList = localData;
     console.log("Favourites loaded")
