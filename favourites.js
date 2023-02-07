@@ -164,10 +164,10 @@ function fetchFavourites() {
 }
 
 function removeDuplicates() {
-    favouritesJSON = favouritesList.map(JSON.stringify);
-    favouriteSet = new Set(favouritesJSON);
-    favouritesArray = Array.from(favouriteSet).map(JSON.parse);
-    favouritesList = favouritesArray;
+    let favouritesJSON = favouritesList.map(JSON.stringify);
+    let favouriteSet = new Set(favouritesJSON);
+    let favouritesArray = Array.from(favouriteSet).map(JSON.parse);
+    let favouritesList = favouritesArray;
 }
 
 
