@@ -29,7 +29,7 @@ window.addEventListener('load',() => {
     console.log(localData, "LocalData");
     console.log(typeof(localData));
     
-    if(localData == "null" || localData == "undefined") {
+    if(localData === "null" || localData === "undefined") {
         favouritesList = [];
     }
     else {
