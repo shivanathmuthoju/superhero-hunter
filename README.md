@@ -1,6 +1,7 @@
 # superhero-hunter
 
 A superhero app made using HTML, CSS and JavaScript only.
+Note: Please give it a few seconds to fetch the data
 
 ## Functionalities
 
