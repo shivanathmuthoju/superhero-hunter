@@ -28,7 +28,14 @@ window.addEventListener('load',() => {
     let localData = JSON.parse(localStorage.getItem(storedFavourites));
     console.log(localData, "LocalData");
     console.log(typeof(localData));
-    favouritesList = localData;
+    
+    if(localData == "null" || localData == "undefined") {
+        favouritesList = [];
+    }
+    else {
+        favouritesList = localData;
+    }
+    
     console.log("Favourites loaded")
 })
 
