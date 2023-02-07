@@ -109,6 +109,9 @@ favouriteBtn.addEventListener('click', () => {
     heroDisplay.style.display = "none";
     favourites.style.display = "none"
     catalogueDisplay.style.display = "none";
+    
+    
+    
     // if there are no favourites displays no results message
     if (favouritesList.length == 0) {
 
@@ -119,6 +122,8 @@ favouriteBtn.addEventListener('click', () => {
         loader.style.display = "none";
     }
     else {
+        // remove duplicates
+        removeDuplicates();
         favHeroes = []
         fetchFavourites();   // fetch favourites from local storage
     }
@@ -156,6 +161,13 @@ function fetchFavourites() {
     
     return;
 
+}
+
+function removeDuplicates() {
+    favouritesJSON = favouritesList.map(JSON.stringify);
+    favouriteSet = new Set(favouritesJSON);
+    favouritesArray = Array.from(favouriteSet).map(JSON.parse);
+    favouritesList = favouritesArray;
 }
 
 
