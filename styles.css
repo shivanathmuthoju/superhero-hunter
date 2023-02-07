@@ -276,7 +276,7 @@ body {
 /* --- displays ---*/
 
 .display__loading {
-  background-image: url('./Assets/images/glitch-effect-black-background-compressed.jpg');
+  background-image: url('./Assets/images/glitch-effect-black-background-compressed-mini.jpg');
   animation: static 1s linear infinite;
   display: none;
   z-index: 10;
