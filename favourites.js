@@ -122,8 +122,7 @@ favouriteBtn.addEventListener('click', () => {
         loader.style.display = "none";
     }
     else {
-        // remove duplicates
-        removeDuplicates();
+        
         favHeroes = []
         fetchFavourites();   // fetch favourites from local storage
     }
@@ -163,12 +162,6 @@ function fetchFavourites() {
 
 }
 
-function removeDuplicates() {
-    let favouritesJSON = favouritesList.map(JSON.stringify);
-    let favouriteSet = new Set(favouritesJSON);
-    let favouritesArray = Array.from(favouriteSet).map(JSON.parse);
-    let favouritesList = favouritesArray;
-}
 
 
 export { checkForFav }
