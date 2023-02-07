@@ -242,6 +242,12 @@ body {
   align-items: center;
 }
 
+.attribution {
+  font-family: "Qellia";
+  color: var(--background-color-secondary);
+  margin-top: 5px;
+}
+
 .search__bar {
   width: 100%;
   outline: none;
